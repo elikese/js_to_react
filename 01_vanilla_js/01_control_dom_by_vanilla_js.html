@@ -1,0 +1,17 @@
+<body>
+    <div id="root"></div>
+    <script>
+        const root = document.getElementById("root");
+
+        const h1 = document.createElement("h1");
+        h1.textContent = "안녕하세요";
+
+        const btn = document.createElement("button");
+        btn.textContent = "누르지 마시오";
+
+        btn.onclick = () => alert("눌렀네?");
+
+        root.appendChild(h1);
+        root.appendChild(btn);
+    </script>
+</body>
