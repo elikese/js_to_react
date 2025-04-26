@@ -1,7 +1,7 @@
-import { resetIndex } from "./04_use_state.js";
-import { App } from "./04_app.js";
+import { resetIndex } from "./05_use_state.js";
+import { App } from "./05_app.js";
 
-export const render = (element, container) => {
+export function render(element, container) {
     const dom =
         element.type === "TEXT_ELEMENT"
             ? document.createTextNode(element.props.nodeValue)
@@ -21,11 +21,11 @@ export const render = (element, container) => {
     element.props.children.forEach((child) => render(child, dom));
 
     container.appendChild(dom);
-};
+}
 
-export const rerender = () => {
+export function rerender() {
     const root = document.getElementById("root");
     root.innerHTML = "";
     resetIndex();
     render(App(), root);
-};
+}

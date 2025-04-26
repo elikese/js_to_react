@@ -1,9 +1,9 @@
-import { rerender } from "./04_render_element.js";
-
 let state = [];
 let index = 0;
+import { rerender } from "./05_render_element.js";
 
-export const useState = (initialValue) => {
+export function useState(initialValue) {
+    console.log(index);
     const currentIndex = index;
     state[currentIndex] ??= initialValue;
 
@@ -15,8 +15,8 @@ export const useState = (initialValue) => {
 
     index++;
     return [state[currentIndex], setState];
-};
+}
 
-export const resetIndex = () => {
+export function resetIndex() {
     index = 0;
-};
+}
