@@ -24,6 +24,7 @@ export const render = (element, container) => {
 };
 
 export const rerender = () => {
+    console.log("rerender");
     const root = document.getElementById("root");
     root.innerHTML = "";
     resetIndex();
